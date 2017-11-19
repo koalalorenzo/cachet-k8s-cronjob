@@ -18,8 +18,8 @@ spec:
               - name: CACHET_APIKEY
                 value: YouShouldUseASecret
               - name: METRIC_ID
-                value: 1
+                value: "1"
               - name: METRIC_VALUE
-                value: 1 # Customize this with anything!
+                value: "1" # Customize this with anything!
           restartPolicy: OnFailure
 ---
