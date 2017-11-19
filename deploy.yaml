@@ -1,0 +1,25 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: cachet-metric-update
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: cachet
+            image: koalalorenzo/cachet-k8s-cronjob
+            env:
+              - name: CACHET_BASE_URL
+                value: https://your.status.page.ext
+              - name: CACHET_APIKEY
+                value: YouShouldUseASecret
+              - name: METRIC_ID
+                value: 1
+              - name: METRIC_VALUE
+                value: 1 # Customize this with anything!
+          restartPolicy: OnFailure
+---

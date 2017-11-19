@@ -1,2 +1,5 @@
 # cachethq-k8s-job
-A simple Kubernetes Cronjob to send custom data to Cachet
+This repository contains all the needed to create a [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) in Kubernetes to
+push new metrics into [Cachet](https://cachethq.io/)
+
+**WIP**
